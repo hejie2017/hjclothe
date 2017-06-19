@@ -109,10 +109,10 @@ public class ClothesManager : MonoBehaviour {
                     //这里的数据是根据我项目中的模型而调节的，大家可以自己任意修改
                     if (distance > 3)
                     {
-                        if (Camera.main.fieldOfView <= 100)
-                            Camera.main.fieldOfView += 2;
-                        if (Camera.main.orthographicSize <= 20)
-                            Camera.main.orthographicSize += 0.5F;
+                        if (Camera.main.fieldOfView > 2)
+                            Camera.main.fieldOfView -= 0.5f;
+                        if (Camera.main.orthographicSize >= 1)
+                            Camera.main.orthographicSize -= 0.3F;
                     }
                 }
                 else
@@ -121,10 +121,10 @@ public class ClothesManager : MonoBehaviour {
                     //这里的数据是根据我项目中的模型而调节的，大家可以自己任意修改
                     if (distance < 18.5)
                     {
-                        if (Camera.main.fieldOfView > 2)
-                            Camera.main.fieldOfView -= 2;
-                        if (Camera.main.orthographicSize >= 1)
-                            Camera.main.orthographicSize -= 0.5F;
+                        if (Camera.main.fieldOfView <= 100)
+                            Camera.main.fieldOfView += 0.5f;
+                        if (Camera.main.orthographicSize <= 20)
+                            Camera.main.orthographicSize += 0.3F;
                     }
                 }
                 //备份上一次触摸点的位置，用于对比
