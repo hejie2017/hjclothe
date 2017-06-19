@@ -178,7 +178,7 @@ public class ClothesManager : MonoBehaviour {
     void DrawButton(FabricPath fp)
     {
         string dir = GetDirName(fp.mainTex);
-        if (GUI.Button(new Rect(40, fp.posY, 200, 20), dir))
+        if (GUI.Button(new Rect(100, fp.posY, 250, 40), dir))
         {
             GameObject xiuzi2 = gameObject.transform.Find("xifu/xifuxiuzi2/default_MeshPart0").gameObject;
             if (xiuzi2)
